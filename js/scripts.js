@@ -1,6 +1,5 @@
 // business logic:
 
-
 // user-interface logic:
 
 $(document).ready(function() {
@@ -10,52 +9,65 @@ $(document).ready(function() {
     var burgerTopping = $("input:radio[name=question2]:checked").val();
     var favoriteAccessory = $("input:radio[name=question3]:checked").val();
     var favoriteActivity = $("input:radio[name=question4]:checked").val();
-    var result = (result1, result2, result3, result4); // need to learn arrays and looping to do this type of result.
+
 
     var result1;
       if (secondaryCharacter === "Gloria") {
-        result1 = "Linda";
+        result1 = 0;
       } else if (secondaryCharacter === "Regular sized Rudy") {
-        result1 = "Louise";
+        result1 = 1;
       } else if (secondaryCharacter === "Jimmy Pesto, Jr.") {
-        result1 = "Tina";
+        result1 = 2;
       } else if (secondaryCharacter === "Courtney Wheeler") {
-        result1 = "Gene";
+        result1 = 3;
 			}
 
     var result2;
       if (burgerTopping === "pickles") {
-        result2 = "Linda";
+        result2 = 0;
       } else if (burgerTopping === "cheese") {
-        result2 = "Louise";
+        result2 = 1;
       } else if (burgerTopping === "peanut butter") {
-        result2 = "Tina";
+        result2 = 2;
       } else if (burgerTopping === "onion rings") {
-        result2 = "Gene";
+        result2 = 3;
   		}
 
     var result3;
       if (favoriteAccessory === "glasses") {
-        result3 = "Linda";
+        result3 = 0;
       } else if (favoriteAccessory === "bunny ears") {
-        result3 = "Louise";
+        result3 = 1;
       } else if (favoriteAccessory === "hair barrette") {
-        result3 = "Tina";
+        result3 = 2;
       } else if (favoriteAccessory === "fart machine") {
-        result3 = "Gene";
+        result3 = 3;
       }
 
     var result4;
       if (favoriteActivity === "singing") {
-        result4 = "Linda";
+        result4 = 0;
       } else if (favoriteActivity === "pranks") {
-        result4 = "Louise";
+        result4 = 1;
       } else if (favoriteActivity === "dancing") {
-        result4 = "Tina";
+        result4 = 2;
       } else if (favoriteActivity === "playing the keyboard") {
-        result4 = "Gene";
+        result4 = 3;
       }
 
-		$("#output").text(result); // need to learn arrays and looping to do this type of result.
+    var result5 = result1 + result2 + result3 + result4;
+
+    var result;
+      if (result5 <= 1) {
+        result = "Linda";
+      } else if (result5 > 1 && result5 <= 4) {
+        result = "Louise";
+      } else if (result5 > 4 && result5 <= 8) {
+        result = "Tina";
+      } else if (result5 > 8 && result5 <=12) {
+        result = "Gene";
+      }
+
+		$("#output").text(result);
 	});
 });
