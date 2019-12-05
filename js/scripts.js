@@ -10,6 +10,7 @@ $(document).ready(function() {
     var burgerTopping = $("input:radio[name=question2]:checked").val();
     var favoriteAccessory = $("input:radio[name=question3]:checked").val();
     var favoriteActivity = $("input:radio[name=question4]:checked").val();
+    var result = (result1, result2, result3, result4); // need to learn arrays and looping to do this type of result.
 
     var result1;
       if (secondaryCharacter === "Gloria") {
@@ -55,7 +56,6 @@ $(document).ready(function() {
         result4 = "Gene";
       }
 
-    var result = (result1, result2, result3, result4)
-		$("#output").text(result);
+		$("#output").text(result); // need to learn arrays and looping to do this type of result.
 	});
 });
